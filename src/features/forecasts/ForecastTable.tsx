@@ -36,16 +36,17 @@ const ForecastTable: React.FC = () => {
     let rows: GridRowsProp = forecasts;
 
     return (
-      <div style={{ height: 500 }}>
+      <div style={{ height: 650 }}>
         <Typography variant="h5" component="div">
             Forecasts
         </Typography>
         {isLoading && <LinearProgress />}
         {isError && <p>{message}</p>}
         <div style={{ display: 'flex', height: '100%', width: '100%' }}>
-          <div style={{ flexGrow: 1 }}>
+          <div style={{ flex: 1 }}>
             {forecasts?.length > 0 && <DataGrid
               rows={rows}
+              rowHeight={45}
               getRowId={row => row.time}
               columns={columns}
               pageSize={12}

@@ -19,12 +19,12 @@ const LocationForm: React.FC = () => {
 
     return (
       <form onSubmit={onSubmit}>
-        <Stack direction="row" justifyContent="center" spacing={5} sx={{mx: 'auto', my: 5}}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} justifyContent="center" spacing={5} sx={{mx: 'auto', my: 5}}>
           <TextField
             id="latitude"
             name="latitude"
             label="Latitude"
-            type="text"
+            type="number"
             value={latitude}
             onChange={(e) => setLatitude(e.target.value)}
           />
@@ -32,11 +32,11 @@ const LocationForm: React.FC = () => {
             id="longitude"
             name="longitude"
             label="Longitude"
-            type="text"
+            type="number"
             value={longitude}
             onChange={(e) => setLongitude(e.target.value)}
           />
-          <Button variant="contained" color="primary"type='submit'>
+          <Button variant="contained" disabled={latitude===''||longitude===''} color="primary"type='submit'>
             Get Forecasts
           </Button>
         </Stack>

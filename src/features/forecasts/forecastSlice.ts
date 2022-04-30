@@ -43,8 +43,7 @@ export const forecastSlice = createSlice({
       .addCase(getForecasts.fulfilled, (state, action) => {
         state.isLoading = false
         state.isSuccess = true
-        // default to newest dates first
-        state.forecasts = action.payload?.locations[0]?.hourly?.reverse()
+        state.forecasts = action.payload?.locations[0]?.hourly
       })
       .addCase(getForecasts.rejected, (state, action) => {
         state.isLoading = false
