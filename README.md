@@ -8,7 +8,17 @@ Demo app that uses WeatherOptics weather API to show the hourly forecast for a l
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
 
-In the project directory, you can run:
+In the project directory:
+
+### Install dependencies
+
+Material UI has not released a version compatible with React v18 so the '--legacy-peer-deps' flasg needs to be used when installing dependencies
+run `npm install --legacy-peer-deps`
+
+### Environment Variables
+
+run `cp .env.sample .env`
+Fill in the API Key and URL for the forecast service
 
 ### `npm start`
 
