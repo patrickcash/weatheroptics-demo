@@ -5,8 +5,8 @@ import { useAppDispatch } from '../../app/hooks'
 import { getForecasts } from './forecastSlice'
 
 const LocationForm: React.FC = () => {
-    const [latitude,setLatitude] = useState('')
-    const [longitude, setLongitude] = useState('')
+    const [latitude,setLatitude] = useState<string>('')
+    const [longitude, setLongitude] = useState<string>('')
     
     const dispatch = useAppDispatch();
   
